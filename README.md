@@ -1,4 +1,4 @@
-# 🏛️ notary-automation
+# 🤖 ai-agents
 
 <p align="center">
   <img src="https://img.shields.io/badge/python-3-blue?logo=python&logoColor=white" alt="Python 3">
@@ -7,13 +7,17 @@
   <img src="https://img.shields.io/badge/learn--in--public-%F0%9F%9A%80-orange" alt="Learn in public">
 </p>
 
-> I'm Thai. I run **Golden State Signature**, a mobile notary business in Sacramento, CA.
-> Instead of tutorial exercises, I'm learning Python by **automating my own busywork**.
-> Every script here does a real job in my business, every single morning.
+> I'm Thai. I run two businesses in Sacramento, CA — **Golden State Signature** (mobile notary) and **OX Beauty Services** (mobile hair).
+> This repo collects the **AI agents and automations I'm building** across all of it.
+> No tutorial exercises: everything here does a real job in a real business.
 
 ---
 
-## ⚡ What lives here
+## 📁 What's inside
+
+### notary-automation — *chapter one*
+
+Python tools that run my notary admin every morning. Built week by week while learning Python.
 
 | Script | Does what | Run it |
 |---|---|---|
@@ -32,13 +36,18 @@ flowchart TD
     M --> S[☀️ morning briefing]
 ```
 
+### 🗺️ Coming next
+
+- **ox-beauty** — automations for my mobile hair business
+- **gss-agents** — agent workflows behind my notary marketing pipeline
+
 ---
 
 ## 🧪 Try it in 30 seconds
 
 ```bash
-git clone https://github.com/oxayavongsa/notary-automation.git
-cd notary-automation
+git clone https://github.com/oxayavongsa/ai-agents.git
+cd ai-agents
 cp data/rotation_sample.txt rotation.txt
 python3 morning_check.py
 ```
@@ -97,5 +106,5 @@ Rates in `quote_estimator.py` come from my own sheet. `MILEAGE_RATE` is marked i
 ---
 
 <p align="center">
-  <sub>Built while learning · Sacramento, CA · Golden State Signature</sub>
+  <sub>Built while learning · Sacramento, CA · Golden State Signature · OX Beauty Services</sub>
 </p>
