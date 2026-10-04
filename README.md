@@ -1,31 +1,101 @@
-# notary-automation
+# 🏛️ notary-automation
 
-Python tools that automate the real admin of my mobile notary business (Golden State Signature, Sacramento CA). This is a **learn-in-public** project — I'm teaching myself Python by automating my own busywork, one small script at a time. Plain Python only, no dependencies.
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3-blue?logo=python&logoColor=white" alt="Python 3">
+  <img src="https://img.shields.io/badge/dependencies-zero-brightgreen" alt="Zero dependencies">
+  <img src="https://img.shields.io/badge/runs_on-your_phone-blueviolet" alt="Runs on your phone">
+  <img src="https://img.shields.io/badge/learn--in--public-%F0%9F%9A%80-orange" alt="Learn in public">
+</p>
 
-## What it does
+> I'm Thai. I run **Golden State Signature**, a mobile notary business in Sacramento, CA.
+> Instead of tutorial exercises, I'm learning Python by **automating my own busywork**.
+> Every script here does a real job in my business, every single morning.
 
-| Script | Purpose |
-|---|---|
-| `morning_check.py` | The daily scan: last 3 ad topics (don't repeat them), today's 4 ad graphics ready-or-missing, plus an optional client quote |
-| `rotation_tracker.py` | Reads `rotation.txt` and prints the last 3 ad topics so I never repeat one |
-| `queue_checker.py` | Checks whether today's 4 ad files (`YYYY-MM-DD-fb/ig1/fb2/ig2.png`) exist yet |
-| `quote_estimator.py` | Interactive quote: signatures + travel + after-hours fee, with military discount |
+---
 
-## Try it
+## ⚡ What lives here
+
+| Script | Does what | Run it |
+|---|---|---|
+| 🌅 `morning_check.py` | The daily scan — last 3 ad topics (don't repeat!), today's 4 ad graphics: ready or missing, plus an optional client quote | `python3 morning_check.py` |
+| 🔁 `rotation_tracker.py` | Reads `rotation.txt`, prints the last 3 ad topics so I never repeat one | `python3 rotation_tracker.py` |
+| ✅ `queue_checker.py` | Checks whether today's 4 ad files (`YYYY-MM-DD-fb/ig1/fb2/ig2.png`) exist yet — the date fills in automatically | `python3 queue_checker.py` |
+| 🧾 `quote_estimator.py` | Interactive quote: signatures + travel + after-hours fee, with military discount | `python3 quote_estimator.py` |
+
+```mermaid
+flowchart TD
+    R[rotation.txt<br/>ad topic log] --> T[rotation_tracker.py<br/>last 3 topics]
+    D[today's ad folder] --> Q[queue_checker.py<br/>ready or missing]
+    T --> M[morning_check.py]
+    Q --> M
+    M -->|optional| E[quote_estimator.py<br/>client quote]
+    M --> S[☀️ morning briefing]
+```
+
+---
+
+## 🧪 Try it in 30 seconds
 
 ```bash
-# copy the sample rotation log next to the scripts, then run:
+git clone https://github.com/oxayavongsa/notary-automation.git
+cd notary-automation
 cp data/rotation_sample.txt rotation.txt
 python3 morning_check.py
 ```
 
-## Run it on your phone
+<details>
+<summary>📱 <b>Run it on your phone</b> — no computer needed</summary>
 
-Install **Pydroid 3** (free, Play Store), paste any script into a new file, tap run. Same code, no changes.
+1. Install **Pydroid 3** (free, Play Store)
+2. Paste any script into a new file, tap run
+3. Same code, zero changes
 
-## Notes
+</details>
 
-- Rates in `quote_estimator.py` are from my own sheet — `MILEAGE_RATE` should be updated whenever the IRS updates the business mileage rate.
-- Built week by week while learning: variables and strings → lists, loops, and files → functions and dicts → one combined pipeline.
+<details>
+<summary>🖥️ <b>Run it on your computer</b></summary>
 
-*Learning Python by automating my real notary busywork — Sacramento, CA.*
+1. Install Python from [python.org](https://www.python.org/downloads/)
+2. Save a script as `something.py`, then run `python3 something.py`
+
+</details>
+
+---
+
+## 📓 Learning log
+
+<details>
+<summary><b>Week 1</b> — talk to the computer: print, variables, strings, input</summary>
+
+Capstone: rotation tracker v1 — hardcoded topics, printed back. The "hello world" of my ad pipeline.
+</details>
+
+<details>
+<summary><b>Week 2</b> — work through lists: lists, loops, files</summary>
+
+Capstones: rotation tracker v2 (reads the real `rotation.txt`) and the post-queue checker (which of today's ad files exist?).
+</details>
+
+<details>
+<summary><b>Week 3</b> — think in functions: functions, dicts, math</summary>
+
+Capstone: the quote estimator — signatures + travel + after-hours + military discount, all from my own rate sheet.
+</details>
+
+<details>
+<summary><b>Week 4</b> — the morning pipeline</summary>
+
+Capstone: `morning_check.py` — all three areas in one scan, with a one-line verdict at the end.
+</details>
+
+---
+
+## ⚠️ One honest note
+
+Rates in `quote_estimator.py` come from my own sheet. `MILEAGE_RATE` is marked in the code — update it whenever the IRS updates the business mileage rate.
+
+---
+
+<p align="center">
+  <sub>Built while learning · Sacramento, CA · Golden State Signature</sub>
+</p>
